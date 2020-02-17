@@ -3,7 +3,7 @@
   "name": "Messenger Lowkey",
   "short_name": "Messenger Lowkey",
   "description": "Check messenger without the stress. Don't send typing indicators or read receipts. Free & open source, only 30 lines of code.",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "permissions": [
     "storage",
     "webRequest",

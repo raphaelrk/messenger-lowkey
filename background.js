@@ -31,12 +31,10 @@
 );
 
 
-// need to make these
+chrome.runtime.onInstalled.addListener(function(details) {
+  if ((details.reason = 'install')) {
+    chrome.tabs.create({ url: 'http://unread.chat/welcome' });
+  }
+});
 
-// chrome.runtime.onInstalled.addListener(function(details) {
-//   if ((details.reason = 'install')) {
-//     chrome.tabs.create({ url: 'https://unread.chat/welcome' });
-//   }
-// });
-
-// chrome.runtime.setUninstallURL('https://unread.chat/uninstall');
+chrome.runtime.setUninstallURL('http://unread.chat/uninstalled');
