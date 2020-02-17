@@ -6,7 +6,7 @@ Made because I think checking messenger is super stressful, partly because it te
 
 ## How to install
 From the chrome webstore:
-- Still under review, will add link when it's up!
+- Go to the [https://chrome.google.com/webstore/detail/pacafepjegmgiiidkgofifmfcjfdkpea/publish-accepted?authuser=3&hl=en](store listing) and click "Add to Chrome"
 
 From source:
 - Download this repo and unzip it
