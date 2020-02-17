@@ -2,3 +2,16 @@
 Check messenger without the stress. Don't send typing indicators or read receipts.
 
 Made because I think checking messenger is super stressful, partly because it tells people as you read their messages. So I just wind up not even clicking into people's messages. I think this could help me get back to people more, and maybe others will like it, too.
+
+
+## How to install
+From the chrome webstore:
+- Still under review, will add link when it's up!
+
+From source:
+- Download this repo and unzip it
+- Go to chrome://extensions
+- Toggle Developer mode on
+- Click "Load unpacked"
+- Select the folder you just unzipped
+- Now you can read & write messages at your leisure
