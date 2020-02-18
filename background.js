@@ -1,7 +1,24 @@
-﻿chrome.webRequest.onBeforeRequest.addListener(
+﻿var ghostMode = true;
+
+chrome.storage.sync.get(['ghostMode'], function(result) {
+  ghostMode = result.ghostMode === false ? false : true;
+
+  chrome.browserAction.setTitle({ title: ghostMode ? "Read receipts are off" : "Read receipts are on" });
+  chrome.browserAction.setIcon({ path: ghostMode ? "images/icon_128.png" : "images/icon_128_gray.png" });
+});
+
+chrome.browserAction.onClicked.addListener(function(tab) {
+  ghostMode = !ghostMode;
+  chrome.storage.sync.set({ ghostMode });
+
+  chrome.browserAction.setTitle({ title: ghostMode ? "Read receipts are off" : "Read receipts are on" });
+  chrome.browserAction.setIcon({ path: ghostMode ? "images/icon_128.png" : "images/icon_128_gray.png" });
+});
+
+chrome.webRequest.onBeforeRequest.addListener(
   function(details) {
     return {
-      cancel: true,
+      cancel: ghostMode,
     };
   },
   {
@@ -30,11 +47,9 @@
   ['blocking']
 );
 
-
 chrome.runtime.onInstalled.addListener(function(details) {
-  if ((details.reason = 'install')) {
-    chrome.tabs.create({ url: 'http://unread.chat/welcome' });
-  }
+  if (details.reason === 'install') chrome.tabs.create({ url: 'http://unread.chat/welcome' });
+  // if (details.reason === 'update') chrome.tabs.create({ url: 'http://unread.chat/welcome' });
 });
 
 chrome.runtime.setUninstallURL('http://unread.chat/uninstalled');
