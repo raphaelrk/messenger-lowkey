@@ -16,7 +16,7 @@ Read receipts and typing indicators optimize for engagement, not comfort. By mak
 
 # How to install
 From the chrome webstore:
-- Go to the [store listing](https://chrome.google.com/webstore/detail/pacafepjegmgiiidkgofifmfcjfdkpea/publish-accepted?authuser=3&hl=en) and click "Add to Chrome"
+- Go to the [store listing](https://chrome.google.com/webstore/detail/messenger-unread/pacafepjegmgiiidkgofifmfcjfdkpea?hl=en-US&gl=US) and click "Add to Chrome"
 
 From source:
 - Download this repo and unzip it
